@@ -1,0 +1,24 @@
+
+  .tabla-columnas {
+    width: 100%;
+    height: 100vh;
+    border-collapse: collapse;
+    border: 1px solid;
+    }
+  
+  .tabla-columnas td {
+       
+        width: 50%;
+        padding: 20px
+    }
+
+    .columna-azul {
+        background-color: aquamarine;
+        color: white
+
+    }
+     .columna-verde {
+        background-color: green;
+        color: white
+
+    }

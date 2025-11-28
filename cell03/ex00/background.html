@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="="es">
+
+<head>
+    <title>Cambia de color</title>
+    <link rel="stylesheet" href="background.css">
+</head>
+<body>
+    <button id="cambiarcolorfondo">cambiar color fondo</button>
+
+    <script>
+        const boton = document.getElementById('cambiarcolorfondo');
+
+        function coloraleatorio() {
+            const letras = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letras[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        let ancho = 20;
+        let alto = 15;
+
+        boton.addEventListener('click', function() {
+        
+            document.body.style.backgroundColor = coloraleatorio();
+
+            ancho += 5;
+            alto += 3;
+            boton.style.padding = `${alto}px ${ancho}px`;
+        });
+    </script>
+
+</body>
+</html>

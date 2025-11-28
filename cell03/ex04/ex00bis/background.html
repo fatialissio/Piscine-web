@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Cambia de color</title>
+    <link rel="stylesheet" href="background.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <button id="cambiarcolorfondo">cambiar color fondo</button>
+
+    <script>
+
+        // 2. Mantener función igual
+        function coloraleatorio() {
+            const letras = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letras[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // 3. Convertimos JavaScript a jQuery
+        let ancho = 20;
+        let alto = 15;
+
+        const boton = $("#cambiarcolorfondo");  // jQuery
+
+        boton.click(function() {               // jQuery
+            $("body").css("background-color", coloraleatorio()); // jQuery
+
+            ancho += 5;
+            alto += 3;
+
+            boton.css("padding", `${alto}px ${ancho}px`); // jQuery
+        });
+
+    </script>
+
+</body>
+</html>
